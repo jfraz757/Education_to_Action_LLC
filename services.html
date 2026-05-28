@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Education to Action LLC</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ─── Services Grid Section ──────────────────────────────── */
+        .services-section {
+            position: relative;
+            background-image: url('BLM_Background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 80px 40px;
+            padding-top: 400px;
+            padding-bottom: 200px;
+            min-height: 100vh;
+        }
+
+        .services-grid {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background-color: rgba(0, 0, 0, 0.80);
+            border: 1px solid rgba(255, 215, 0, 0.25);
+            border-top: 4px solid #FFD700;
+            padding: 44px 40px;
+            color: #ffffff;
+            transition: border-color 0.3s ease, background-color 0.3s ease;
+        }
+
+        .service-card:hover {
+            background-color: rgba(0, 0, 0, 0.95);
+            border-color: rgba(255, 215, 0, 0.6);
+            border-top-color: #FFD700;
+        }
+
+        .service-card h2 {
+            font-family: 'Michroma', sans-serif;
+            font-size: clamp(1rem, 1.6vw, 1.25rem);
+            font-weight: 400;
+            color: #FFD700;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .service-card p {
+            font-size: 0.97rem;
+            line-height: 1.85;
+            color: rgba(255, 255, 255, 0.88);
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .service-card ul li {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.88);
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.6;
+            font-weight: 600;
+        }
+
+        .service-card ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 7px;
+            height: 7px;
+            background-color: #FFD700;
+            border-radius: 50%;
+        }
+
+        .service-card blockquote {
+            font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+            font-style: italic;
+            color: #FFD700;
+            line-height: 1.7;
+            letter-spacing: 0.5px;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            border-left: 3px solid #FFD700;
+            padding-left: 16px;
+        }
+
+        /* ─── Active Nav Link ────────────────────────────────────── */
+        .active-page {
+            color: #ffffff !important;
+        }
+
+        /* ─── Mobile ─────────────────────────────────────────────── */
+        @media (max-width: 768px) {
+            .services-section {
+                background-image: none;
+                background-color: transparent;
+                padding: 50px 20px;
+                padding-top: 160px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .service-card {
+                padding: 30px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="Gold_Logo.png" alt="Education to Action Logo">
+        </div>
+        <div class="nav-container">
+            <div class="site-title">Education To Action LLC</div>
+            <nav>
+                <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+                    &#9776;
+                </button>
+                <ul id="nav-menu">
+                    <li><a href="index.html" onclick="closeMenu()">Home</a></li>
+                    <li><a href="services.html" class="active-page" onclick="closeMenu()">Services</a></li>
+                    <li><a href="joe-frazier.html" onclick="closeMenu()">Joe Frazier</a></li>
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScnRDvYLvn8VYq_FLqO-u11D0qY9zu-PwXoZ-S4VW2Ogkls2g/viewform" target="_blank" onclick="closeMenu()">Intake Form</a></li>
+                    <li><a href="#contact" onclick="closeMenu()">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Services Cards -->
+    <section class="services-section">
+        <div class="services-grid">
+
+            <!-- Consultations & Facilitations -->
+            <div class="service-card">
+                <h2>Consultations &amp; Facilitations</h2>
+                <p>We take a pragmatic approach to problem solving, meaning the insights offered from EtA are designed around the issues specific to your institution and its unique situation, in forming the right action plan for your needs.</p>
+                <p>As experienced facilitators we use methods based in empathy and lived-experience to lead difficult conversations and courageous discussions, across varying subjects, political issues, and current events.</p>
+            </div>
+
+            <!-- Research & Data Analysis -->
+            <div class="service-card">
+                <h2>Research &amp; Data Analysis</h2>
+                <p>Any good initiative must start with a plan. Before a plan can be made, we need the right data. EtA will gather that data and utilize all resources provided to ensure that all insights given are based in the most recent and relevant information available via the following:</p>
+                <ul>
+                    <li>Focus Groups</li>
+                    <li>Climate Studies</li>
+                    <li>Surveys</li>
+                    <li>1:1 Interviews</li>
+                </ul>
+            </div>
+
+            <!-- Workshops & Presentations -->
+            <div class="service-card">
+                <h2>Workshops &amp; Presentations</h2>
+                <p>EtA has led interactive workshops and presentations, both in-person and virtually. The topics span across a variety of DEI related subjects including:</p>
+                <ul>
+                    <li>Implicit Bias</li>
+                    <li>Micro-Aggressions</li>
+                    <li>Direct-Action Organizing</li>
+                    <li>Inclusive Leadership</li>
+                    <li>Critical Theory</li>
+                    <li>Building Community</li>
+                    <li>And More...</li>
+                </ul>
+            </div>
+
+            <!-- Community Led Responses -->
+            <div class="service-card">
+                <h2>Community Led Responses &amp; Resolutions</h2>
+                <blockquote>"Nothing About Us Without Us is For Us!"</blockquote>
+                <p>We believe that any efforts aimed at addressing a disparity for a population requires that members of that group have a seat at the leadership table.</p>
+                <p>We work in community alongside our clients, prioritizing and elevating the voices of those most impacted in every aspect of our work.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact / Footer Section -->
+    <section class="contact-footer" id="contact">
+        <div class="contact-inner">
+
+            <div class="contact-left">
+                <h2 class="contact-title">CONTACT US</h2>
+                <a href="mailto:Education2Action@gmail.com" class="contact-email">
+                    Education2Action@gmail.com
+                </a>
+            </div>
+
+            <div class="contact-form">
+                <div class="form-fields-left">
+                    <input type="text" placeholder="Name" />
+                    <input type="email" placeholder="Email" />
+                    <input type="tel" placeholder="Phone" />
+                </div>
+                <div class="form-fields-right">
+                    <textarea placeholder="Type your message here..."></textarea>
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/company/education2action" target="_blank" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('open');
+        }
+
+        function closeMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.remove('open');
+        }
+    </script>
+
+</body>
+</html>
