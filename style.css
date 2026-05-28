@@ -306,7 +306,6 @@ nav a:hover {
 /* ─── Mobile ─────────────────────────────────────────────── */
 @media (max-width: 768px) {
 
-    /* One continuous background on body */
     body {
         background-image: url('BLM_Background.jpg');
         background-size: cover;
@@ -315,17 +314,16 @@ nav a:hover {
         background-attachment: scroll;
     }
 
-    /* Header */
     header {
         flex-direction: column;
         align-items: center;
         padding: 15px 20px;
         position: relative;
-        background-color: rgba(30, 30, 30, 0.60);
+        background-color: rgba(30, 30, 30, 0.90);
     }
 
     .logo img {
-        height: 80px;
+        height: 60px;
     }
 
     .nav-container {
@@ -333,7 +331,7 @@ nav a:hover {
         left: auto;
         right: auto;
         width: 100%;
-        margin-top: 10px;
+        margin-top: 8px;
     }
 
     .site-title {
@@ -344,7 +342,6 @@ nav a:hover {
         -webkit-text-stroke: 0.5px #FFD700;
     }
 
-    /* Hamburger button */
     .hamburger {
         display: block;
         background: none;
@@ -357,7 +354,6 @@ nav a:hover {
         margin: 8px auto 0;
     }
 
-    /* Nav menu hidden by default */
     nav ul {
         display: none;
         flex-direction: column;
@@ -387,15 +383,14 @@ nav a:hover {
         width: 100%;
     }
 
-    /* Hero — transparent so body background shows through */
     .hero {
         background-image: none;
         background-color: transparent;
         background-attachment: scroll;
-        min-height: 100vh;
+        min-height: auto;
         padding: 40px 0 60px;
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         justify-content: center;
     }
 
@@ -418,7 +413,6 @@ nav a:hover {
         text-align: left;
     }
 
-    /* Contact section — transparent so body background shows through */
     .contact-footer {
         background-image: none;
         background-color: transparent;
