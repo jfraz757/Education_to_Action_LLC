@@ -15,7 +15,7 @@ html, body {
 
 /* ─── Header ─────────────────────────────────────────────── */
 header {
-    position: absolute;
+    position: sticky;
     top: 0;
     width: 100%;
     display: flex;
