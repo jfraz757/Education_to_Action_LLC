@@ -6,144 +6,6 @@
     <title>Education to Action LLC</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* ─── Projects Section ───────────────────────────────────── */
-        .projects-section {
-            position: relative;
-            background-image: url('BLM_Background.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            padding: 80px 40px;
-        }
-
-        .projects-section::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-color: rgba(0, 0, 0, 0.82);
-            z-index: 0;
-        }
-
-        .projects-inner {
-            position: relative;
-            z-index: 1;
-            max-width: 1100px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .projects-title {
-            font-family: 'Michroma', sans-serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: #FFD700;
-            -webkit-text-stroke: 1px #FFD700;
-            letter-spacing: 3px;
-            margin-bottom: 16px;
-        }
-
-        .projects-subtitle {
-            font-size: 1rem;
-            color: rgba(255, 255, 255, 0.7);
-            max-width: 720px;
-            margin: 0 auto 52px;
-            line-height: 1.8;
-            font-weight: 600;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            text-align: left;
-        }
-
-        .project-card {
-            background-color: rgba(0, 0, 0, 0.80);
-            border: 1px solid rgba(255, 215, 0, 0.25);
-            border-top: 4px solid #FFD700;
-            padding: 44px 40px;
-            color: #ffffff;
-            transition: border-color 0.3s ease, background-color 0.3s ease;
-        }
-
-        .project-card:hover {
-            background-color: rgba(0, 0, 0, 0.95);
-            border-color: rgba(255, 215, 0, 0.6);
-            border-top-color: #FFD700;
-        }
-
-        .project-tag {
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #FFD700;
-            margin-bottom: 12px;
-        }
-
-        .project-name {
-            font-family: 'Michroma', sans-serif;
-            font-size: clamp(1rem, 1.6vw, 1.25rem);
-            font-weight: 400;
-            color: #FFD700;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-            line-height: 1.4;
-        }
-
-        .project-desc {
-            font-size: 0.97rem;
-            color: rgba(255, 255, 255, 0.88);
-            line-height: 1.85;
-            margin-bottom: 24px;
-            font-weight: 600;
-        }
-
-        .project-link {
-            display: inline-block;
-            color: #FFD700;
-            font-size: 0.9rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-decoration: none;
-            border-bottom: 1px solid rgba(255, 215, 0, 0.5);
-            padding-bottom: 3px;
-            transition: color 0.3s ease, border-color 0.3s ease;
-        }
-
-        .project-link:hover {
-            color: #ffffff;
-            border-color: #ffffff;
-        }
-
-        @media (max-width: 768px) {
-            .projects-section {
-                background-image: none;
-                background-color: transparent;
-                background-attachment: scroll;
-                padding: 50px 20px;
-            }
-
-            .projects-section::before {
-                display: none;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-                gap: 24px;
-            }
-
-            .project-card {
-                padding: 30px 24px;
-            }
-
-            .projects-title {
-                font-size: 1.4rem;
-            }
-        }
-    </style>
 </head>
 <body>
 
@@ -161,7 +23,7 @@
                     <li><a href="index.html" onclick="closeMenu()">Home</a></li>
                     <li><a href="services.html" onclick="closeMenu()">Services</a></li>
                     <li><a href="Joe_Frazier.html" onclick="closeMenu()">Joe Frazier</a></li>
-                    <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+                    <li><a href="projects.html" onclick="closeMenu()">Projects</a></li>
                     <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScnRDvYLvn8VYq_FLqO-u11D0qY9zu-PwXoZ-S4VW2Ogkls2g/viewform?usp=header" target="_blank" onclick="closeMenu()">Intake Form</a></li>
                     <li><a href="#contact" onclick="closeMenu()">Contact Us</a></li>
                 </ul>
@@ -169,28 +31,12 @@
         </div>
     </header>
 
-    <!-- Projects Section -->
-    <section class="projects-section" id="projects">
-        <div class="projects-inner">
-            <h2 class="projects-title">ACTIVE PROJECTS</h2>
-            <p class="projects-subtitle">Research and community organizing don't stop at the whiteboard. These are live tools built to address real gaps in access, accountability, and transparency.</p>
-            <div class="projects-grid">
-
-                <div class="project-card">
-                    <div class="project-tag">Economic Equity</div>
-                    <h3 class="project-name">The People's Ledger</h3>
-                    <p class="project-desc">A public directory of minority and underrepresented businesses in Kentucky — rebuilt as an act of resistance after coordinated legal attacks on economic equity programs forced the original records dark. Over 1,100 certified businesses. Free to search, free to submit.</p>
-                    <a href="https://jfraz757.github.io/The_Peoples_Ledger" target="_blank" class="project-link">Visit The People's Ledger →</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-tag">Workforce Transparency</div>
-                    <h3 class="project-name">CandidateVoice.org</h3>
-                    <p class="project-desc">An anonymous candidate experience review platform exposing hiring process transparency — or the lack of it — across 400+ companies. Job seekers share what actually happened: ghosted, rejected, hired, or still waiting. Every review is a data point. Every data point is a pattern.</p>
-                    <a href="https://candidatevoice.org" target="_blank" class="project-link">Visit CandidateVoice.org →</a>
-                </div>
-
-            </div>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Putting Theory Into Practice For A Better Tomorrow</h1>
+            <p>At Education to Action LLC, we use a combination of research and community organizing experience to inform, develop, and execute initiatives aimed at addressing the many different disparities that impact both contemporary and historically marginalized groups. We will proudly work in community alongside any institution, organization, or individual that wants to utilize pragmatic, data-informed, and needs-based approaches in order to create equitable and just communities for all.</p>
         </div>
     </section>
 

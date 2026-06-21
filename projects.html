@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Education to Action LLC</title>
+    <title>Projects | Education to Action LLC</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* ─── Services Grid Section ──────────────────────────────── */
-        .services-section {
+        .projects-section {
             position: relative;
             background-image: url('BLM_Background.jpg');
             background-size: cover;
@@ -20,7 +19,7 @@
             min-height: 100vh;
         }
 
-        .services-grid {
+        .projects-grid {
             position: relative;
             z-index: 1;
             display: grid;
@@ -30,7 +29,7 @@
             margin: 0 auto;
         }
 
-        .service-card {
+        .project-card {
             background-color: rgba(0, 0, 0, 0.80);
             border: 1px solid rgba(255, 215, 0, 0.25);
             border-top: 4px solid #FFD700;
@@ -39,13 +38,13 @@
             transition: border-color 0.3s ease, background-color 0.3s ease;
         }
 
-        .service-card:hover {
+        .project-card:hover {
             background-color: rgba(0, 0, 0, 0.95);
             border-color: rgba(255, 215, 0, 0.6);
             border-top-color: #FFD700;
         }
 
-        .service-card h2 {
+        .project-card h2 {
             font-family: 'Michroma', sans-serif;
             font-size: clamp(1rem, 1.6vw, 1.25rem);
             font-weight: 400;
@@ -55,77 +54,60 @@
             line-height: 1.4;
         }
 
-        .service-card p {
+        .project-tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #FFD700;
+            opacity: 0.75;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
             font-size: 0.97rem;
             line-height: 1.85;
             color: rgba(255, 255, 255, 0.88);
             font-weight: 600;
-            margin-bottom: 16px;
+            margin-bottom: 24px;
         }
 
-        .service-card ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .service-card ul li {
-            font-size: 0.95rem;
-            color: rgba(255, 255, 255, 0.88);
-            padding: 6px 0;
-            padding-left: 20px;
-            position: relative;
-            line-height: 1.6;
-            font-weight: 600;
-        }
-
-        .service-card ul li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 7px;
-            height: 7px;
-            background-color: #FFD700;
-            border-radius: 50%;
-        }
-
-        .service-card blockquote {
-            font-size: clamp(0.95rem, 1.4vw, 1.1rem);
-            font-style: italic;
+        .project-link {
+            display: inline-block;
             color: #FFD700;
-            line-height: 1.7;
-            letter-spacing: 0.5px;
-            margin-top: 20px;
-            margin-bottom: 12px;
-            border-left: 3px solid #FFD700;
-            padding-left: 16px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.5);
+            padding-bottom: 3px;
+            transition: color 0.3s ease, border-color 0.3s ease;
         }
 
-        /* ─── Active Nav Link ────────────────────────────────────── */
+        .project-link:hover {
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+
         .active-page {
             color: #ffffff !important;
         }
 
-        /* ─── Mobile ─────────────────────────────────────────────── */
         @media (max-width: 768px) {
-            .services-section {
+            .projects-section {
                 background-image: none;
                 background-color: transparent;
                 padding: 50px 20px;
                 padding-top: 160px;
                 background-attachment: scroll;
-                background-size: cover;
-                background-position: center;
             }
 
-            .services-grid {
+            .projects-grid {
                 grid-template-columns: 1fr;
                 gap: 24px;
             }
 
-            .service-card {
+            .project-card {
                 padding: 30px 24px;
             }
         }
@@ -145,60 +127,32 @@
                 </button>
                 <ul id="nav-menu">
                     <li><a href="index.html" onclick="closeMenu()">Home</a></li>
-                    <li><a href="services.html" class="active-page" onclick="closeMenu()">Services</a></li>
+                    <li><a href="services.html" onclick="closeMenu()">Services</a></li>
                     <li><a href="Joe_Frazier.html" onclick="closeMenu()">Joe Frazier</a></li>
-                    <li><a href="projects.html" onclick="closeMenu()">Projects</a></li>
-                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScnRDvYLvn8VYq_FLqO-u11D0qY9zu-PwXoZ-S4VW2Ogkls2g/viewform" target="_blank" onclick="closeMenu()">Intake Form</a></li>
+                    <li><a href="projects.html" class="active-page" onclick="closeMenu()">Projects</a></li>
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScnRDvYLvn8VYq_FLqO-u11D0qY9zu-PwXoZ-S4VW2Ogkls2g/viewform?usp=header" target="_blank" onclick="closeMenu()">Intake Form</a></li>
                     <li><a href="#contact" onclick="closeMenu()">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Services Cards -->
-    <section class="services-section">
-        <div class="services-grid">
+    <!-- Projects Cards -->
+    <section class="projects-section">
+        <div class="projects-grid">
 
-            <!-- Consultations & Facilitations -->
-            <div class="service-card">
-                <h2>Consultations &amp; Facilitations</h2>
-                <p>We take a pragmatic approach to problem solving, meaning the insights offered from EtA are designed around the issues specific to your institution and its unique situation, in forming the right action plan for your needs.</p>
-                <p>As experienced facilitators we use methods based in empathy and lived-experience to lead difficult conversations and courageous discussions, across varying subjects, political issues, and current events.</p>
+            <div class="project-card">
+                <div class="project-tag">Economic Equity</div>
+                <h2>The People's Ledger</h2>
+                <p>A public directory of minority and underrepresented businesses in Kentucky — rebuilt as an act of resistance after coordinated legal attacks on economic equity programs forced the original records dark. Over 1,100 certified businesses. Free to search, free to submit.</p>
+                <a href="https://jfraz757.github.io/The_Peoples_Ledger" target="_blank" class="project-link">Visit The People's Ledger →</a>
             </div>
 
-            <!-- Research & Data Analysis -->
-            <div class="service-card">
-                <h2>Research &amp; Data Analysis</h2>
-                <p>Any good initiative must start with a plan. Before a plan can be made, we need the right data. EtA will gather that data and utilize all resources provided to ensure that all insights given are based in the most recent and relevant information available via the following:</p>
-                <ul>
-                    <li>Focus Groups</li>
-                    <li>Climate Studies</li>
-                    <li>Surveys</li>
-                    <li>1:1 Interviews</li>
-                </ul>
-            </div>
-
-            <!-- Workshops & Presentations -->
-            <div class="service-card">
-                <h2>Workshops &amp; Presentations</h2>
-                <p>EtA has led interactive workshops and presentations, both in-person and virtually. The topics span across a variety of DEI related subjects including:</p>
-                <ul>
-                    <li>Implicit Bias</li>
-                    <li>Micro-Aggressions</li>
-                    <li>Direct-Action Organizing</li>
-                    <li>Inclusive Leadership</li>
-                    <li>Critical Theory</li>
-                    <li>Building Community</li>
-                    <li>And More...</li>
-                </ul>
-            </div>
-
-            <!-- Community Led Responses -->
-            <div class="service-card">
-                <h2>Community Led Responses &amp; Resolutions</h2>
-                <blockquote>"Nothing About Us Without Us is For Us!"</blockquote>
-                <p>We believe that any efforts aimed at addressing a disparity for a population requires that members of that group have a seat at the leadership table.</p>
-                <p>We work in community alongside our clients, prioritizing and elevating the voices of those most impacted in every aspect of our work.</p>
+            <div class="project-card">
+                <div class="project-tag">Workforce Transparency</div>
+                <h2>CandidateVoice.org</h2>
+                <p>An anonymous candidate experience review platform exposing hiring process transparency — or the lack of it — across 400+ companies. Job seekers share what actually happened: ghosted, rejected, hired, or still waiting. Every review is a data point. Every data point is a pattern.</p>
+                <a href="https://candidatevoice.org" target="_blank" class="project-link">Visit CandidateVoice.org →</a>
             </div>
 
         </div>
