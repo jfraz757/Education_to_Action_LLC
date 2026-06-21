@@ -148,9 +148,10 @@ nav a:hover {
 /* ─── Projects Section ───────────────────────────────────── */
 .projects-section {
     position: relative;
-    background-color: #111111;
+    background-color: #0d0d0d;
     border-top: 1px solid rgba(255, 215, 0, 0.15);
     border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+    isolation: isolate;
 }
 
 .projects-inner {
@@ -580,5 +581,14 @@ nav a:hover {
 
     .project-card {
         padding: 28px 22px;
+        background-color: rgba(10, 10, 10, 0.92);
+    }
+
+    .projects-section {
+        background-color: #0d0d0d;
+    }
+
+    .project-desc {
+        font-size: 0.88rem;
     }
 }
