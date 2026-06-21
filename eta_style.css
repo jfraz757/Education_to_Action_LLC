@@ -1,0 +1,584 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+/* ─── Reset ──────────────────────────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    min-height: 100%;
+    background-color: #1a1a1a;
+}
+
+/* ─── Header ─────────────────────────────────────────────── */
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 50px;
+    z-index: 10;
+    background-color: rgba(30, 30, 30, 0.60);
+}
+
+.logo {
+    flex: 0 0 auto;
+    z-index: 1;
+}
+
+.logo img {
+    height: 150px;
+}
+
+.nav-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;
+}
+
+.nav-container > * {
+    pointer-events: auto;
+}
+
+/* ─── Site Title ─────────────────────────────────────────── */
+.site-title {
+    font-family: 'Michroma', sans-serif;
+    font-weight: 400;
+    color: #FFD700;
+    font-size: clamp(28px, 3.8vw, 56px);
+    letter-spacing: 3px;
+    -webkit-text-stroke: 1.5px #FFD700;
+    padding-bottom: 4px;
+    border-bottom: 4px solid #FFD700;
+    margin-bottom: 14px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+    white-space: nowrap;
+}
+
+/* ─── Nav Links ──────────────────────────────────────────── */
+.hamburger {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFD700;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+/* ─── Hero ───────────────────────────────────────────────── */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('BLM_Background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-overlay {
+    display: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    max-width: 1000px;
+    width: 82%;
+    padding: 50px 70px;
+    background-color: rgba(0, 0, 0, 0.62);
+    border-radius: 2px;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.hero-content h1 {
+    font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    color: #ffffff;
+}
+
+.hero-content h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 12px auto 0;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    line-height: 1.85;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    font-weight: 600;
+}
+
+/* ─── Projects Section ───────────────────────────────────── */
+.projects-section {
+    position: relative;
+    background-color: #111111;
+    border-top: 1px solid rgba(255, 215, 0, 0.15);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+}
+
+.projects-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.projects-title {
+    font-family: 'Michroma', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FFD700;
+    -webkit-text-stroke: 1px #FFD700;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+}
+
+.projects-subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.65);
+    max-width: 680px;
+    margin: 0 auto 52px;
+    line-height: 1.8;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+}
+
+.project-card {
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 4px;
+    padding: 36px 32px;
+    text-align: left;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: #FFD700;
+    background-color: rgba(255, 215, 0, 0.05);
+}
+
+.project-icon {
+    font-size: 2rem;
+    margin-bottom: 14px;
+}
+
+.project-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFD700;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.project-name {
+    font-family: 'Michroma', sans-serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+}
+
+.project-desc {
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.85;
+    margin-bottom: 24px;
+}
+
+.project-link {
+    display: inline-block;
+    color: #FFD700;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.4);
+    padding-bottom: 2px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+/* ─── Contact / Footer Section ───────────────────────────── */
+.contact-footer {
+    position: relative;
+    background-image: url('BLM_Background.jpg');
+    background-size: cover;
+    background-position: bottom center;
+    background-attachment: fixed;
+}
+
+.contact-footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.60);
+    z-index: 0;
+}
+
+.contact-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 70px 80px;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.contact-title {
+    font-family: 'Michroma', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #FFD700;
+    -webkit-text-stroke: 1px #FFD700;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.contact-email {
+    color: #FFD700;
+    font-size: 0.95rem;
+    text-decoration: underline;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.contact-email:hover {
+    color: #ffffff;
+}
+
+.contact-form {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.form-fields-left {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-fields-right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-end;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: rgba(60, 60, 60, 0.75);
+    border: none;
+    border-bottom: 2px solid #FFD700;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    padding: 10px 12px;
+    outline: none;
+    width: 240px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.contact-form textarea {
+    width: 260px;
+    height: 120px;
+    resize: none;
+    border: none;
+    border-bottom: 2px solid #FFD700;
+}
+
+.contact-form button {
+    background-color: transparent;
+    border: 2px solid #FFD700;
+    color: #FFD700;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 10px 36px;
+    border-radius: 25px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #FFD700;
+    color: #1a1a1a;
+}
+
+/* ─── Footer Bottom ──────────────────────────────────────── */
+.footer-bottom {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 80px;
+    border-top: 1px solid rgba(255, 215, 0, 0.25);
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer-social a {
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #FFD700;
+}
+
+.footer-social a svg {
+    display: block;
+    color: rgba(255, 255, 255, 0.55);
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover svg {
+    color: #FFD700;
+}
+
+/* ─── Mobile ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+    body {
+        background-image: url('BLM_Background.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 20px;
+        position: relative;
+        background-color: rgba(30, 30, 30, 0.90);
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .nav-container {
+        position: relative;
+        left: auto;
+        right: auto;
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .site-title {
+        font-size: clamp(18px, 6vw, 28px);
+        letter-spacing: 1px;
+        white-space: normal;
+        text-align: center;
+        -webkit-text-stroke: 0.5px #FFD700;
+    }
+
+    .hamburger {
+        display: block;
+        background: none;
+        border: 2px solid #FFD700;
+        color: #FFD700;
+        font-size: 22px;
+        padding: 4px 12px;
+        cursor: pointer;
+        border-radius: 4px;
+        margin: 8px auto 0;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        background-color: rgba(20, 20, 20, 0.95);
+        width: 100%;
+        padding: 10px 0;
+        margin-top: 8px;
+        border-top: 1px solid rgba(255, 215, 0, 0.3);
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        padding: 12px 0;
+        font-size: 14px;
+        border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+        width: 100%;
+    }
+
+    .hero {
+        background-image: none;
+        background-color: transparent;
+        background-attachment: scroll;
+        min-height: auto;
+        padding: 40px 0 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-content {
+        width: 92%;
+        padding: 30px 25px;
+        margin-top: 0;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+
+    .hero-content h1 {
+        font-size: 1.4rem;
+        text-align: left;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+        text-align: left;
+    }
+
+    .contact-footer {
+        background-image: none;
+        background-color: transparent;
+        background-attachment: scroll;
+    }
+
+    .contact-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 40px 25px;
+        text-align: center;
+    }
+
+    .contact-left {
+        align-items: center;
+    }
+
+    .contact-title {
+        font-size: 1.6rem;
+    }
+
+    .contact-form {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .form-fields-left,
+    .form-fields-right {
+        width: 100%;
+        align-items: stretch;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+    }
+
+    .contact-form textarea {
+        width: 100%;
+        height: 100px;
+    }
+
+    .contact-form button {
+        width: 100%;
+    }
+
+    .footer-bottom {
+        padding: 16px 20px;
+    }
+
+    .projects-inner {
+        padding: 52px 24px;
+    }
+
+    .projects-title {
+        font-size: 1.4rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-card {
+        padding: 28px 22px;
+    }
+}
