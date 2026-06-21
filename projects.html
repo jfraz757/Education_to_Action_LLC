@@ -11,14 +11,25 @@
             position: relative;
             background-image: url('BLM_Background.jpg');
             background-size: cover;
-            background-position: center;
+            background-position: center top;
             background-attachment: fixed;
             padding: 80px 40px;
             padding-bottom: 200px;
             min-height: 100vh;
         }
 
+        .projects-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.35);
+            z-index: 0;
+        }
+
         .projects-grid {
+            position: relative;
+            z-index: 1;
+        }
             position: relative;
             z-index: 1;
             display: grid;
