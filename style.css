@@ -145,6 +145,106 @@ nav a:hover {
     font-weight: 600;
 }
 
+/* ─── Projects Section ───────────────────────────────────── */
+.projects-section {
+    position: relative;
+    background-color: #111111;
+    border-top: 1px solid rgba(255, 215, 0, 0.15);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+}
+
+.projects-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.projects-title {
+    font-family: 'Michroma', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FFD700;
+    -webkit-text-stroke: 1px #FFD700;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+}
+
+.projects-subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.65);
+    max-width: 680px;
+    margin: 0 auto 52px;
+    line-height: 1.8;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+}
+
+.project-card {
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 4px;
+    padding: 36px 32px;
+    text-align: left;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: #FFD700;
+    background-color: rgba(255, 215, 0, 0.05);
+}
+
+.project-icon {
+    font-size: 2rem;
+    margin-bottom: 14px;
+}
+
+.project-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFD700;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.project-name {
+    font-family: 'Michroma', sans-serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+}
+
+.project-desc {
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.85;
+    margin-bottom: 24px;
+}
+
+.project-link {
+    display: inline-block;
+    color: #FFD700;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.4);
+    padding-bottom: 2px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
 /* ─── Contact / Footer Section ───────────────────────────── */
 .contact-footer {
     position: relative;
@@ -463,5 +563,22 @@ nav a:hover {
 
     .footer-bottom {
         padding: 16px 20px;
+    }
+
+    .projects-inner {
+        padding: 52px 24px;
+    }
+
+    .projects-title {
+        font-size: 1.4rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-card {
+        padding: 28px 22px;
     }
 }
