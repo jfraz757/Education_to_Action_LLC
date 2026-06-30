@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact | Education to Action LLC</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ─── Impact Section ─────────────────────────────────────── */
+        .impact-section {
+            position: relative;
+            background-image: url('BLM_Background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 220px 40px 200px;
+            min-height: 100vh;
+        }
+
+        .impact-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.55);
+            z-index: 0;
+        }
+
+        .impact-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .impact-title {
+            font-family: 'Michroma', sans-serif;
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 700;
+            color: #FFD700;
+            -webkit-text-stroke: 1px #FFD700;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .impact-subtitle {
+            font-size: 1.05rem;
+            color: #ffffff;
+            font-weight: 600;
+            max-width: 720px;
+            line-height: 1.8;
+            margin-bottom: 44px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.95);
+        }
+
+        .impact-eyebrow {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #FFD700;
+            opacity: 0.75;
+            margin-bottom: 10px;
+        }
+
+        /* ─── Cards ──────────────────────────────────────────────── */
+        .impact-card {
+            background-color: rgba(0, 0, 0, 0.80);
+            border: 1px solid rgba(255, 215, 0, 0.25);
+            border-top: 4px solid #FFD700;
+            padding: 44px 40px;
+            color: #ffffff;
+            margin-bottom: 28px;
+            transition: border-color 0.3s ease, background-color 0.3s ease;
+        }
+
+        .impact-card:hover {
+            background-color: rgba(0, 0, 0, 0.95);
+            border-color: rgba(255, 215, 0, 0.6);
+            border-top-color: #FFD700;
+        }
+
+        .impact-card h2 {
+            font-family: 'Michroma', sans-serif;
+            font-size: clamp(1rem, 1.6vw, 1.25rem);
+            font-weight: 400;
+            color: #FFD700;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+            line-height: 1.4;
+        }
+
+        .impact-card p {
+            font-size: 0.97rem;
+            line-height: 1.85;
+            color: rgba(255, 255, 255, 0.88);
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        .impact-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .impact-tagline {
+            color: #FFD700;
+            font-style: italic;
+            letter-spacing: 0.5px;
+        }
+
+        /* ─── Two-column platform grid ───────────────────────────── */
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+            margin-bottom: 28px;
+        }
+
+        .impact-grid .impact-card {
+            margin-bottom: 0;
+        }
+
+        .impact-tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #FFD700;
+            opacity: 0.75;
+            margin-bottom: 10px;
+        }
+
+        .impact-link {
+            display: inline-block;
+            color: #FFD700;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.5);
+            padding-bottom: 3px;
+            margin-top: 6px;
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .impact-link:hover {
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        /* ─── Track record list ──────────────────────────────────── */
+        .impact-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 18px 0;
+        }
+
+        .impact-card ul li {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.88);
+            padding: 8px 0 8px 22px;
+            position: relative;
+            line-height: 1.75;
+            font-weight: 600;
+        }
+
+        .impact-card ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 14px;
+            width: 7px;
+            height: 7px;
+            background-color: #FFD700;
+            border-radius: 50%;
+        }
+
+        .impact-recognition {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 600;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        .impact-recognition strong {
+            color: #FFD700;
+            letter-spacing: 1px;
+        }
+
+        /* ─── Closing line ───────────────────────────────────────── */
+        .impact-close {
+            text-align: center;
+            font-family: 'Michroma', sans-serif;
+            font-size: clamp(0.95rem, 1.6vw, 1.2rem);
+            color: #FFD700;
+            letter-spacing: 1px;
+            line-height: 1.7;
+            margin-top: 44px;
+            padding: 0 20px;
+        }
+
+        /* ─── Active Nav Link ────────────────────────────────────── */
+        .active-page {
+            color: #ffffff !important;
+        }
+
+        /* ─── Mobile ─────────────────────────────────────────────── */
+        @media (max-width: 768px) {
+            .impact-section {
+                background-image: none;
+                background-color: transparent;
+                background-attachment: scroll;
+                padding: 160px 20px 80px;
+            }
+
+            .impact-section::before {
+                display: none;
+            }
+
+            .impact-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .impact-card {
+                padding: 30px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="Gold_Logo.png" alt="Education to Action Logo">
+        </div>
+        <div class="nav-container">
+            <div class="site-title">Education To Action LLC</div>
+            <nav>
+                <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+                    &#9776;
+                </button>
+                <ul id="nav-menu">
+                    <li><a href="index.html" onclick="closeMenu()">Home</a></li>
+                    <li><a href="services.html" onclick="closeMenu()">Services</a></li>
+                    <li><a href="projects.html" onclick="closeMenu()">Projects</a></li>
+                    <li><a href="impact.html" class="active-page" onclick="closeMenu()">Impact</a></li>
+                    <li><a href="Joe_Frazier.html" onclick="closeMenu()">Joe Frazier</a></li>
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScnRDvYLvn8VYq_FLqO-u11D0qY9zu-PwXoZ-S4VW2Ogkls2g/viewform?usp=header" target="_blank" onclick="closeMenu()">Intake Form</a></li>
+                    <li><a href="#contact" onclick="closeMenu()">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Impact Section -->
+    <section class="impact-section">
+        <div class="impact-inner">
+
+            <h1 class="impact-title">Theory Into Practice</h1>
+            <p class="impact-subtitle">Many equity practitioners stop at the recommendation. Education to Action sees projects to fruition, then measures the impact.</p>
+
+            <!-- Origin -->
+            <div class="impact-card">
+                <div class="impact-eyebrow">Origin</div>
+                <p>Education to Action started with a belief: that Higher Education holds the key to creating change, but most academics lack the conviction to put their theories to the test. In 2015, after Ferguson, I built the Student Police Unity League at Virginia Tech: Black students and police officers on the same recreational volleyball teams, structured around Intergroup Contact Theory, to test whether sustained, equal-status contact could rebuild trust.</p>
+                <p>I measured the results honestly. The season was short, attendance fell off, and the sample was small, so most of the findings did not reach statistical significance, with several running opposite to what I had predicted. I reported that plainly in the thesis instead of dressing up a null result.</p>
+                <p>The program did not prove its hypothesis, but it proved the principle this firm is named for: theory is worth nothing until you build it, run it, and measure what actually happens. Everything below is what that lesson looks like once it is pointed at real problems.</p>
+            </div>
+
+            <!-- Proof intro -->
+            <div class="impact-card">
+                <div class="impact-eyebrow">Proof, Not Promises</div>
+                <p>When Kentucky's anti-DEI turn began dismantling the programs that underrepresented communities depended on, we did not write a statement about it. We built free, public infrastructure that does not need state permission to exist. Both platforms below are live right now, free to use, with no login required.</p>
+            </div>
+
+            <!-- Platforms -->
+            <div class="impact-grid">
+
+                <div class="impact-card">
+                    <div class="impact-tag">Economic Equity</div>
+                    <h2>The People's Ledger</h2>
+                    <p>A free, open-source directory of underrepresented businesses in Kentucky, built so people can put their dollars where their values are. It holds 1,464 verified, deduplicated business records across 23 industry categories and nine ownership categories, powered by a Python data pipeline, Claude API field extraction, and a Supabase backend.</p>
+                    <p>Where the state's certification database served procurement officers, this one serves anyone with a dollar to spend, and it survives independent of state-level political will. <span class="impact-tagline">Money talks. Spend where it counts.</span></p>
+                    <a href="https://thepeoplesledger.net" target="_blank" class="impact-link">Visit The People's Ledger →</a>
+                </div>
+
+                <div class="impact-card">
+                    <div class="impact-tag">Workforce Transparency</div>
+                    <h2>CandidateVoice</h2>
+                    <p>Honest, firsthand information about what it is actually like to apply to an organization: ghosting rates, application friction, response times, and outcomes. Every reported experience is scored on a transparent 0 to 100 scale and aggregated by employer, across 545 reviews and 413 companies.</p>
+                    <p>It tracks the foundation, nonprofit, and public sectors alongside everyone else, because accountability should not stop at the doors of the institutions that ask for it most. <span class="impact-tagline">Exposing the ghosters. Finding the humans.</span></p>
+                    <a href="https://candidatevoice.org" target="_blank" class="impact-link">Visit CandidateVoice.org →</a>
+                </div>
+
+            </div>
+
+            <!-- Consulting -->
+            <div class="impact-card">
+                <div class="impact-eyebrow">Consulting and Facilitation</div>
+                <h2>Hired, Delivered, Hired Again</h2>
+                <p>Before the platforms, the firm's first work was direct facilitation, for Volunteers of America Mid-States, the regional arm of the national nonprofit serving Kentucky, Tennessee, and West Virginia.</p>
+                <p>The work began with a six-session Cultural Humility series for Veteran Services and the leadership team in 2021, and it led to two more engagements: Voices for Equity, a six-part series on facilitation skills for social justice conversations, and Managing a Diverse Team, delivered to 60 to 70 supervisors and managers through VOA's Center for Leadership Bootcamp.</p>
+                <p>Every session was built on the Brave Space framework and grounded in real situations the staff faced, using case scenarios drawn directly from Veteran Services rather than off-the-shelf examples. Each engagement led to the next, the plainest evidence that the work was useful enough to be worth hiring again.</p>
+            </div>
+
+            <!-- Track record -->
+            <div class="impact-card">
+                <div class="impact-eyebrow">The Track Record Behind the Builds</div>
+                <p>Education to Action is led by Joe Frazier, who has spent fifteen years turning research into measurable outcomes across higher education, corporate, nonprofit, and government settings.</p>
+                <ul>
+                    <li>At Bellarmine University, he rebuilt a stalled mentorship effort into Knights of Color. The Office of Institutional Research and Effectiveness confirmed 90.2% second-year retention for participants versus 75.8% for non-participating Black peers, and a 62.5% four-year graduation rate. The program is now in its seventh year.</li>
+                    <li>As founding Executive Director of the Kentucky Chamber Center for DEI, he secured over $500,000 in funding, including a $290,000 W.K. Kellogg Foundation grant, and built MBDKY.com, the state's first database of certified minority-owned businesses, with more than 1,000 listings.</li>
+                    <li>At Brown-Forman, he led diversity strategy across the United States, Mexico, Panama, Scotland, and Ireland, and analyzed engagement data from over 3,000 employee profiles to find and close equity gaps.</li>
+                </ul>
+                <p class="impact-recognition"><strong>Recognition:</strong> Louisville Business First 40 Under 40, Kentucky Colonel, and Non-Profit/Government Organization of the Year at Derby Diversity Week.</p>
+            </div>
+
+            <p class="impact-close">Morality without Action is pointless.</p>
+
+        </div>
+    </section>
+
+    <!-- Contact / Footer Section -->
+    <section class="contact-footer" id="contact">
+        <div class="contact-inner">
+
+            <div class="contact-left">
+                <h2 class="contact-title">CONTACT US</h2>
+                <a href="mailto:Education2Action@gmail.com" class="contact-email">
+                    Education2Action@gmail.com
+                </a>
+            </div>
+
+            <div class="contact-form">
+                <div class="form-fields-left">
+                    <input type="text" placeholder="Name" />
+                    <input type="email" placeholder="Email" />
+                    <input type="tel" placeholder="Phone" />
+                </div>
+                <div class="form-fields-right">
+                    <textarea placeholder="Type your message here..."></textarea>
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/company/education2action" target="_blank" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('open');
+        }
+
+        function closeMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.remove('open');
+        }
+    </script>
+
+</body>
+</html>
