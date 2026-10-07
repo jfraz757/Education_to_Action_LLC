@@ -145,6 +145,59 @@ nav a:hover {
     font-weight: 600;
 }
 
+/* ─── Proof Strip (home) ─────────────────────────────────── */
+.proof-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 34px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 215, 0, 0.35);
+}
+
+.proof-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    padding: 6px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.proof-item:hover {
+    background-color: rgba(255, 215, 0, 0.08);
+}
+
+.proof-number {
+    font-family: 'Michroma', sans-serif;
+    font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+    color: #FFD700;
+    letter-spacing: 1px;
+}
+
+.proof-label {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+}
+
+.proof-more {
+    display: inline-block;
+    margin-top: 22px;
+    color: #FFD700;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+
+.proof-more:hover {
+    text-decoration: underline;
+}
+
 /* ─── Projects Section ───────────────────────────────────── */
 .projects-section {
     position: relative;
@@ -415,6 +468,11 @@ nav a:hover {
 
 /* ─── Mobile ─────────────────────────────────────────────── */
 @media (max-width: 768px) {
+    .proof-strip {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
 
     body {
         background-image: url('BLM_Background.jpg');

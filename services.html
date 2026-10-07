@@ -144,6 +144,69 @@
                 padding: 30px 24px;
             }
         }
+
+        /* ─── How We Work (process line) ─────────────────────────── */
+        .service-card ol.process-line {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 24px;
+            counter-reset: step;
+        }
+
+        .service-card ol.process-line li {
+            position: relative;
+            padding: 0;
+            counter-increment: step;
+        }
+
+        .service-card ol.process-line li::before {
+            content: none;
+        }
+
+        /* Arrow between steps */
+        .service-card ol.process-line li:not(:last-child)::after {
+            content: '\2192';
+            position: absolute;
+            right: -18px;
+            top: 2px;
+            color: #FFD700;
+            font-size: 1rem;
+        }
+
+        .process-step {
+            display: block;
+            font-family: 'Michroma', sans-serif;
+            color: #FFD700;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .process-step::before {
+            content: counter(step) ". ";
+        }
+
+        .process-desc {
+            display: block;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.88);
+            font-weight: 600;
+        }
+
+        @media (max-width: 900px) {
+            .service-card ol.process-line {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .service-card ol.process-line li:not(:last-child)::after {
+                content: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -176,6 +239,18 @@
     <!-- Services Cards -->
     <section class="services-section">
         <div class="services-grid">
+
+            <!-- How We Work -->
+            <div class="service-card service-card-wide">
+                <h2>How We Work</h2>
+                <ol class="process-line">
+                    <li><span class="process-step">Listen</span><span class="process-desc">Start with the people closest to the issue.</span></li>
+                    <li><span class="process-step">Research</span><span class="process-desc">Gather the data through focus groups, climate studies, surveys, and interviews.</span></li>
+                    <li><span class="process-step">Plan</span><span class="process-desc">Build an action plan around your institution's specific situation.</span></li>
+                    <li><span class="process-step">Facilitate</span><span class="process-desc">Lead the conversations and trainings that put the plan to work.</span></li>
+                    <li><span class="process-step">Measure</span><span class="process-desc">Track what actually changes, and report it honestly.</span></li>
+                </ol>
+            </div>
 
             <!-- Consultations & Facilitations -->
             <div class="service-card">
